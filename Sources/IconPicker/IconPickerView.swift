@@ -1,5 +1,5 @@
 //
-//  SwiftUIIconPicker.swift
+//  IconPickerView.swift
 //  PPL
 //
 //  Created by Michal Jendrzejewski on 28/05/2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 import DYPopoverView
 
-struct SwiftUIIconPicker: View {
+struct IconPickerView: View {
     var iconTapAction: (_ iconName: String) -> Void
     var searchFieldTitle: String?
     var headerView: AnyView?
