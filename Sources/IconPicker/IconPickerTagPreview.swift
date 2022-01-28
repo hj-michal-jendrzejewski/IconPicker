@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SFSymbolsPicker
 
 struct IconPickerTagPreview: View {
     var tag:Tag
