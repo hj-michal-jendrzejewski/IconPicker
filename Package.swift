@@ -21,10 +21,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "IconPicker",
+            dependencies: [],
+            exclude: [],
             resources: [
-                  .process("emoji.json")
-                ],
-            dependencies: []),
+                            .process("emoji.json")
+                        ]
+        ),
+        
         .testTarget(
             name: "IconPickerTests",
             dependencies: ["IconPicker"]),
