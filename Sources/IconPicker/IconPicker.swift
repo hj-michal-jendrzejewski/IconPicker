@@ -188,25 +188,25 @@ struct IconPicker: View {
 }
 
 
-struct IconPickerView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        func printString(string: String) -> Void {
-            print(string)
-        }
-        
-        func printTag(tag: Tag) -> Void {
-            print(tag.name)
-        }
-        
-        let tag = Tag(context: PersistenceController.preview.container.viewContext)
-        
-        return IconPickerView(
-            iconTapAction: printString,
-            headerView: AnyView(TagWithAdditionalActionView(tag: tag, additionalAction: printTag, actionImageName: "pencil", actionImageColor: .yellow)),
-            triggerSizeAndCoordinates: CGRect(x: 27.0, y: 481.0, width: 100.0, height: 20.0),
-            connectorColor: Color.orange)
-            .environmentObject(SelectedThemeColors())
-            .environmentObject(Emojis())
-    }
-}
+//struct IconPickerView_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        func printString(string: String) -> Void {
+//            print(string)
+//        }
+//        
+//        func printTag(tag: Tag) -> Void {
+//            print(tag.name)
+//        }
+//        
+//        let tag = Tag(context: PersistenceController.preview.container.viewContext)
+//        
+//        return IconPickerView(
+//            iconTapAction: printString,
+//            headerView: AnyView(TagWithAdditionalActionView(tag: tag, additionalAction: printTag, actionImageName: "pencil", actionImageColor: .yellow)),
+//            triggerSizeAndCoordinates: CGRect(x: 27.0, y: 481.0, width: 100.0, height: 20.0),
+//            connectorColor: Color.orange)
+//            .environmentObject(SelectedThemeColors())
+//            .environmentObject(Emojis())
+//    }
+//}

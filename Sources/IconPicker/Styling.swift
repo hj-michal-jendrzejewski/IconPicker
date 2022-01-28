@@ -7,41 +7,41 @@
 
 import SwiftUI
 
-//struct IconsSectionHeader: ViewModifier {
-//    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
-//    
-//    func body(content: Content) -> some View {
-//        content
-//            .font(.footnote)
-//            .foregroundColor(selectedThemeColors.bgMainColour)
-//            .padding(5)
-//    }
-//}
-//
-//extension View {
-//    func iconsSectionHeaderStyle() -> some View {
-//        self.modifier(IconsSectionHeader())
-//    }
-//}
-//
-//struct SmartIconsSectionHeader: ViewModifier {
-//    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
-//    
-//    func body(content: Content) -> some View {
-//        content
-//            .font(.footnote)
-//            .foregroundColor(selectedThemeColors.bgMainColour)
-//            .padding(5)
-//            .background(selectedThemeColors.fontMainColour.opacity(0.6))
-//            .cornerRadius(5)
-//    }
-//}
-//
-//extension View {
-//    func smartIconsSectionHeaderStyle() -> some View {
-//        self.modifier(SmartIconsSectionHeader())
-//    }
-//}
+struct IconsSectionHeader: ViewModifier {
+    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.footnote)
+            .foregroundColor(selectedThemeColors.bgMainColour)
+            .padding(5)
+    }
+}
+
+extension View {
+    func iconsSectionHeaderStyle() -> some View {
+        self.modifier(IconsSectionHeader())
+    }
+}
+
+struct SmartIconsSectionHeader: ViewModifier {
+    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.footnote)
+            .foregroundColor(selectedThemeColors.bgMainColour)
+            .padding(5)
+            .background(selectedThemeColors.fontMainColour.opacity(0.6))
+            .cornerRadius(5)
+    }
+}
+
+extension View {
+    func smartIconsSectionHeaderStyle() -> some View {
+        self.modifier(SmartIconsSectionHeader())
+    }
+}
 
 struct DashedProgressViewStyle: ProgressViewStyle {
     let dashSize = [CGFloat(20), CGFloat(3)]
