@@ -8,7 +8,7 @@
 import SwiftUI
 import DYPopoverView
 
-struct SwiftUIIconPicker: View {
+struct IconPicker: View {
     var iconTapAction: (_ iconName: String) -> Void
     var searchFieldTitle: String?
     var headerView: AnyView?
