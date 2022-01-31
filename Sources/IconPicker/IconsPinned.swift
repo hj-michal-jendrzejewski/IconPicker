@@ -12,7 +12,7 @@
 //    @Binding var iconsCategoriesSizes: [String: CGFloat]
 //
 //    @AppStorage("pinnedIcons") var pinnedIcons: [String] = []
-//    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+//    
 //
 //    private let gridSpacing = 10
 //    private let iconWidth = 24
@@ -77,7 +77,7 @@
 //        .id("pinned")
 //        .frame(width:pinnedIcons.count > 18 ? CGFloat((ceil(Double(Float(pinnedIcons.count)/Float(6))))*34) : 90,height: 255.00)
 //        .padding(10)
-//        .background(selectedThemeColors.bgSecondaryColour)
+//        .background(SelectedThemeColors2()bgSecondaryColour)
 //        .cornerRadius(10)
 //        .onAppear {
 //            // the horizontal available space is size.width

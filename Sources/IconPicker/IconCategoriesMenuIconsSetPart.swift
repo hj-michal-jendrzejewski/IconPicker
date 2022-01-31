@@ -16,13 +16,13 @@ struct IconCategoriesMenuIconsSetPart: View {
     @Binding var PHSAndAllCategoriesToolTipsVisibilityArray: Array<Bool>
     var visibleCategoryName:String
     
-    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
     
     private let fakeBgHeight: CGFloat = 41
     
     func getMenuItemBgView() -> AnyView {
         return AnyView(Rectangle()
-            .fill(selectedThemeColors.bgMainColour)
+            .fill(SelectedThemeColors2()bgMainColour)
             .frame(width: 43, height: fakeBgHeight))
     }
     

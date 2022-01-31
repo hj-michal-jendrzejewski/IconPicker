@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
     @Binding var text: String
     var searchFieldTitle: String?
     @State private var isEditing = false
@@ -25,7 +25,7 @@ struct SearchBar: View {
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(selectedThemeColors.fontSecondaryColour)
+                            .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
                  
@@ -35,7 +35,7 @@ struct SearchBar: View {
                                 self.text = ""
                             }) {
                                 Image(systemName: "multiply.circle.fill")
-                                    .foregroundColor(selectedThemeColors.fontSecondaryColour)
+                                    .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
                                     .padding(.trailing, 8)
                             }
                         }

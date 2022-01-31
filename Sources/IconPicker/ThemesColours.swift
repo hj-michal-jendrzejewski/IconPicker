@@ -8,6 +8,32 @@
 import Foundation
 import SwiftUI
 
+class SelectedThemeColors2 {
+    public var bgMainColour = Color.gray.opacity(0.5)
+    public var bgSecondaryColour = Color(red: 227/255, green: 226/255, blue: 224/255)
+    public var fontMainColour = Color(red: 30/255, green: 30/255, blue: 30/255)
+    public var fontSecondaryColour = Color.gray
+    public var elementActiveColour = Color.green
+    public var buttonMainColour = Color.blue
+    public var buttonBgColour = Color.green
+    public var buttonInactiveColour = Color.gray
+    public var buttonInactiveBgColour = Color.green.opacity(0.5)
+    public var listHeaderColour = Color.orange
+    
+    func changeColorTheme(theme: ThemeColours) -> Void {
+        bgMainColour = theme.bgMainColour
+        bgSecondaryColour = theme.bgSecondaryColour
+        fontMainColour = theme.fontMainColour
+        fontSecondaryColour = theme.fontSecondaryColour
+        elementActiveColour = theme.elementActiveColour
+        buttonMainColour = theme.buttonMainColour
+        buttonBgColour = theme.buttonBgColour
+        buttonInactiveColour = theme.buttonInactiveColour
+        buttonInactiveBgColour = theme.buttonInactiveBgColour
+        listHeaderColour = theme.listHeaderColour
+    }
+}
+
 public class SelectedThemeColors: ObservableObject {
     @Published var bgMainColour = Color.gray.opacity(0.5)
     @Published var bgSecondaryColour = Color(red: 227/255, green: 226/255, blue: 224/255)

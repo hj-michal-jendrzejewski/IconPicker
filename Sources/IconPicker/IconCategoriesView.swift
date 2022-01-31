@@ -27,7 +27,7 @@ struct IconCategoriesView: View {
     
     
     
-    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
     @AppStorage("pinnedIcons") var pinnedIcons: [String] = []
     @AppStorage("last24Icons") var last24Icons: [String] = []
     
@@ -212,7 +212,7 @@ struct IconCategoriesView: View {
                 }
                 .iconsSectionHeaderStyle()
                 .frame(width: 270)
-                .background(categoriesRainbowColors[visibleCategoryName] != nil ? categoriesRainbowColors[visibleCategoryName] : selectedThemeColors.fontMainColour.opacity(1))
+                .background(categoriesRainbowColors[visibleCategoryName] != nil ? categoriesRainbowColors[visibleCategoryName] : SelectedThemeColors2()fontMainColour.opacity(1))
                 .cornerRadius(5)
                 .zIndex(10)
                 .opacity(["Pinned", "History", "Suggestions"].firstIndex(of: visibleCategoryName) == nil ? 1.0 : 0.0)
@@ -239,7 +239,7 @@ struct IconCategoriesView: View {
             
 //        }
         }
-        .foregroundColor(selectedThemeColors.listHeaderColour)
+        .foregroundColor(SelectedThemeColors2()listHeaderColour)
 
     }
 }

@@ -10,7 +10,7 @@
 //struct IconPickerTagPreview: View {
 //    var tag:Tag
 //    @Environment(\.managedObjectContext) private var viewContext
-//    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+//    
 //    @State private var icon = ""
 //    @State var scaleImage : CGFloat = 1
 //    @State var iconName: String = ""

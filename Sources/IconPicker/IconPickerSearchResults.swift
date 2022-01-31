@@ -23,7 +23,7 @@ struct IconPickerSearchResults: View {
     ]
     private let gridSpacing = 10
     
-    @EnvironmentObject var selectedThemeColors: SelectedThemeColors
+    
     @EnvironmentObject var emojis: Emojis
     
     
@@ -46,7 +46,7 @@ struct IconPickerSearchResults: View {
                     Text("Results for ") + Text(self.searchIconName).bold() + Text(":")
                     Spacer()
                     Image(systemName: "multiply.circle.fill")
-                        .foregroundColor(selectedThemeColors.listHeaderColour)
+                        .foregroundColor(SelectedThemeColors2()listHeaderColour)
                         .onTapGesture {
                             self.searchIconName = ""
                         }
@@ -69,7 +69,7 @@ struct IconPickerSearchResults: View {
                     Text("No icons for ") + Text(self.searchIconName).bold() + Text(":(")
                     Spacer()
                     Image(systemName: "multiply.circle.fill")
-                        .foregroundColor(selectedThemeColors.fontSecondaryColour)
+                        .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
                         .onTapGesture {
                             self.searchIconName = ""
                         }
@@ -83,10 +83,10 @@ struct IconPickerSearchResults: View {
         .cornerRadius(15)
 //                .border()
         .animation(.easeIn)
-        .foregroundColor(selectedThemeColors.listHeaderColour)
+        .foregroundColor(SelectedThemeColors2()listHeaderColour)
         .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(selectedThemeColors.fontSecondaryColour.opacity(0.8), lineWidth: 1)
+                    .stroke(SelectedThemeColors2()fontSecondaryColour.opacity(0.8), lineWidth: 1)
         )
         .onChange(of: self.searchIconName, perform: { value in
             self.setSearchResults()
