@@ -34,8 +34,10 @@ public struct IconPickerView: View {
 
     private let headerLocalY: CGFloat = 19
     
+    public init() {}
     
-    public var body: some View {
+    
+    var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             
             // triggering view to headerView connector
