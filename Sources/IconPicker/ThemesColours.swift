@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SelectedThemeColors: ObservableObject {
+public class SelectedThemeColors: ObservableObject {
     @Published var bgMainColour = Color.gray.opacity(0.5)
     @Published var bgSecondaryColour = Color(red: 227/255, green: 226/255, blue: 224/255)
     @Published var fontMainColour = Color(red: 30/255, green: 30/255, blue: 30/255)
