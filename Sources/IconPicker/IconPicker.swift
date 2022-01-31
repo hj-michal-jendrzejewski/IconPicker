@@ -18,14 +18,14 @@ public struct IconPickerView: View {
     @EnvironmentObject var selectedThemeColors: SelectedThemeColors
     @EnvironmentObject var emojis: Emojis
     
-    @State private var searchIconName:String
-    @State private var scrolledToCategoryName:String
-    @State private var visibleCategoryName: String
-    @State private var visibleCategoryPercentageFromBeginning: Double
-    @State private var cleanHistoryButtonTipVisibility: Bool
-    @State private var settingsTipVisible: Bool
-    @State private var showSfSymbols: Bool
-    @State private var arrowPathOpacity
+    @State private var searchIconName:String = ""
+    @State private var scrolledToCategoryName:String = ""
+    @State private var visibleCategoryName: String = "Pinned"
+    @State private var visibleCategoryPercentageFromBeginning: Double = 0.0
+    @State private var cleanHistoryButtonTipVisibility: Bool = false
+    @State private var settingsTipVisible: Bool = false
+    @State private var showSfSymbols: Bool = true
+    @State private var arrowPathOpacity = 0.0
     
     
     @AppStorage("last24Icons") var last24Icons: [String] = []
@@ -34,20 +34,12 @@ public struct IconPickerView: View {
 
     private let headerLocalY: CGFloat = 19
     
-    public init() {
+    public init(iconTapAction: @escaping (_ iconName: String) -> Void, searchFieldTitle: String?, headerView: AnyView?, triggerSizeAndCoordinates: CGRect?, connectorColor: Color?) {
         self.iconTapAction = iconTapAction
-        self.searchFieldTitle = searchFieldTitle
-        self.headerView = headerView
-        self.triggerSizeAndCoordinates = triggerSizeAndCoordinates
-        self.connectorColor = connectorColor
-        _searchIconName = State(initialValue: "")
-        _scrolledToCategoryName = State(initialValue: "")
-        _visibleCategoryName = State(initialValue: "")
-        _visibleCategoryPercentageFromBeginning = State(initialValue: 0.0)
-        _cleanHistoryButtonTipVisibility = State(initialValue: false)
-        _settingsTipVisible = State(initialValue: false)
-        _showSfSymbols = State(initialValue: true)
-        _arrowPathOpacity = State(initialValue: 0.0)
+        self.searchFieldTitle = searchFieldTitle ?? nil
+        self.headerView = headerView ?? nil
+        self.triggerSizeAndCoordinates = triggerSizeAndCoordinates ?? nil
+        self.connectorColor = connectorColor ?? nil
     }
     
     
