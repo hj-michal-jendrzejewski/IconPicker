@@ -37,7 +37,7 @@ public struct IconPickerView: View {
     public init() {}
     
     
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             
             // triggering view to headerView connector
