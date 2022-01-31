@@ -47,7 +47,7 @@ struct IconCategoriesMenuView: View {
     
     func getMenuItemBgView() -> AnyView {
         return AnyView(Rectangle()
-            .fill(SelectedThemeColors2()bgMainColour)
+            .fill(SelectedThemeColors2().bgMainColour)
             .frame(width: 43, height: fakeBgHeight))
     }
     
@@ -61,10 +61,10 @@ struct IconCategoriesMenuView: View {
                 Image(systemName: "pin")
                     .padding([.top, .trailing, .bottom],9)
                     .padding([.leading], 0)
-                    .foregroundColor(visibleCategoryName == "Pinned" ? SelectedThemeColors2()fontMainColour.opacity(0.9) : SelectedThemeColors2()fontMainColour.opacity(0.6))
+                    .foregroundColor(visibleCategoryName == "Pinned" ? SelectedThemeColors2().fontMainColour.opacity(0.9) : SelectedThemeColors2().fontMainColour.opacity(0.6))
                     .scaleEffect((visibleCategoryName == "Pinned" || self.PHSAndAllCategoriesToolTipsVisibilityArray[0] == true) ? 1.5 : 1)
                     .background(getMenuItemBgView())
-                    .overlay(SelectedThemeColors2()fontMainColour
+                    .overlay(SelectedThemeColors2().fontMainColour
                                 .opacity(visibleCategoryName == "Pinned" ? 0.9 : 0.0)
                                                             .cornerRadius(10)
                                                             .frame(height: 2).offset(x:0, y: 15))
@@ -73,18 +73,18 @@ struct IconCategoriesMenuView: View {
             .onHover { hover in
                 self.PHSAndAllCategoriesToolTipsVisibilityArray[0] = hover
             }
-            .popoverView(content: {Text("PINNED").foregroundColor(.white)}, background: {SelectedThemeColors2()fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[0], frame: .constant(CGRect(x: 200, y: 0, width: 80, height: 30)), anchorFrame: nil, popoverType: .popout, position: .topRight, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 15, height: -10)))
+            .popoverView(content: {Text("PINNED").foregroundColor(.white)}, background: {SelectedThemeColors2().fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[0], frame: .constant(CGRect(x: 200, y: 0, width: 80, height: 30)), anchorFrame: nil, popoverType: .popout, position: .topRight, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 15, height: -10)))
 
             Button(action: {
                 scrolledToCategoryName = "History"
             }) {
                 Image(systemName: "clock")
                     .padding(9)
-                    .foregroundColor(visibleCategoryName == "History" ? SelectedThemeColors2()fontMainColour.opacity(0.9) : SelectedThemeColors2()fontMainColour.opacity(0.6))
+                    .foregroundColor(visibleCategoryName == "History" ? SelectedThemeColors2().fontMainColour.opacity(0.9) : SelectedThemeColors2().fontMainColour.opacity(0.6))
 
                     .scaleEffect((visibleCategoryName == "History" || self.PHSAndAllCategoriesToolTipsVisibilityArray[1] == true) ? 1.5 : 1)
                     .background(getMenuItemBgView())
-                    .overlay(SelectedThemeColors2()fontMainColour
+                    .overlay(SelectedThemeColors2().fontMainColour
                                 .opacity(visibleCategoryName == "History" ? 0.9 : 0.0)
                                                             .cornerRadius(10)
                                                             .frame(height: 2).offset(x:0, y: 15))
@@ -93,17 +93,17 @@ struct IconCategoriesMenuView: View {
             .onHover { hover in
                 self.PHSAndAllCategoriesToolTipsVisibilityArray[1] = hover
             }
-            .popoverView(content: {Text("HISTORY").foregroundColor(.white)}, background: {SelectedThemeColors2()fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[1], frame: .constant(CGRect(x: 200, y: 0, width: 80, height: 30)), anchorFrame: nil, popoverType: .popout, position: .top, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 10, height: 0)))
+            .popoverView(content: {Text("HISTORY").foregroundColor(.white)}, background: {SelectedThemeColors2().fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[1], frame: .constant(CGRect(x: 200, y: 0, width: 80, height: 30)), anchorFrame: nil, popoverType: .popout, position: .top, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 10, height: 0)))
             //
             Button(action: {
                 scrolledToCategoryName = "Suggestions"
             }) {
                 Image(systemName: "lasso.sparkles")
                     .padding(9)
-                    .foregroundColor(visibleCategoryName == "Suggestions" ? SelectedThemeColors2()fontMainColour.opacity(0.9) : SelectedThemeColors2()fontMainColour.opacity(0.6))
+                    .foregroundColor(visibleCategoryName == "Suggestions" ? SelectedThemeColors2().fontMainColour.opacity(0.9) : SelectedThemeColors2().fontMainColour.opacity(0.6))
                     .scaleEffect((visibleCategoryName == "Suggestions" || PHSAndAllCategoriesToolTipsVisibilityArray[2] == true) ? 1.5 : 1)
                     .background(getMenuItemBgView())
-                    .overlay(SelectedThemeColors2()fontMainColour
+                    .overlay(SelectedThemeColors2().fontMainColour
                                 .opacity(visibleCategoryName == "Suggestions" ? 0.9 : 0.0)
                                                             .cornerRadius(10)
                                                             .frame(height: 2).offset(x:0, y: 15))
@@ -113,7 +113,7 @@ struct IconCategoriesMenuView: View {
             .onHover { hover in
                 self.PHSAndAllCategoriesToolTipsVisibilityArray[2] = hover
             }
-            .popoverView(content: {Text("SUGGESTIONS").foregroundColor(.white)}, background: {SelectedThemeColors2()fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[2], frame: .constant(CGRect(x: 0, y: 0, width: 140, height: 30)), anchorFrame: nil, popoverType: .popout, position: .top, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 10, height: 0)))
+            .popoverView(content: {Text("SUGGESTIONS").foregroundColor(.white)}, background: {SelectedThemeColors2().fontMainColour.opacity(0.6)}, isPresented: self.$PHSAndAllCategoriesToolTipsVisibilityArray[2], frame: .constant(CGRect(x: 0, y: 0, width: 140, height: 30)), anchorFrame: nil, popoverType: .popout, position: .top, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: 10, height: 0)))
             
             Divider()
 //                .background(Color.black.opacity(0.1))
@@ -182,9 +182,9 @@ struct IconCategoriesMenuView: View {
             .font(.system(size: 0.1))
 
             Text("Bg filler ")
-                .foregroundColor(SelectedThemeColors2()bgMainColour)
+                .foregroundColor(SelectedThemeColors2().bgMainColour)
                 .background(Rectangle()
-                                .fill(SelectedThemeColors2()bgMainColour)
+                                .fill(SelectedThemeColors2().bgMainColour)
                                 .frame(width: 30, height: fakeBgHeight * 2.5)
                                 .offset(y: -20),
                             alignment: .topLeading)
@@ -193,7 +193,7 @@ struct IconCategoriesMenuView: View {
                 
         }
         .background(Rectangle()
-                        .fill(SelectedThemeColors2()bgMainColour)
+                        .fill(SelectedThemeColors2().bgMainColour)
                         .frame(width: 27, height: fakeBgHeight * 2.5).offset(x: -33),
                     alignment: .topLeading)
         .frame(width:420)

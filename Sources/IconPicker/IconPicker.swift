@@ -89,13 +89,13 @@ public struct IconPickerView: View {
                                 .offset(y: -5)
                         }
                     }
-                    .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
+                    .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
 //                    .frame(height: 25)
                     Spacer()
                     
                     Toggle(isOn: $showSfSymbols) {
                             Text("Show EMOJIS")
-                                .foregroundColor(SelectedThemeColors2()fontMainColour)
+                                .foregroundColor(SelectedThemeColors2().fontMainColour)
                                 .font(.caption)
                                 .multilineTextAlignment(.trailing)
                     }
@@ -107,14 +107,14 @@ public struct IconPickerView: View {
                     Button(action: {}) {
                         Image(systemName: "gearshape.fill")
                             .font(.title)
-                            .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
+                            .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
 //                            .background(getMenuItemBgView())
                     }
                     
                         .onHover { hover in
                             settingsTipVisible = hover
                         }
-                        .popoverView(content: {Text("Go to settings").foregroundColor(.white)}, background: {SelectedThemeColors2()fontSecondaryColour.opacity(0.6)}, isPresented: $settingsTipVisible, frame: .constant(CGRect(x: 200, y: 0, width: 120, height: 30)), anchorFrame: nil, popoverType: .popout, position: .left, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: -3, height: 18)))
+                        .popoverView(content: {Text("Go to settings").foregroundColor(.white)}, background: {SelectedThemeColors2().fontSecondaryColour.opacity(0.6)}, isPresented: $settingsTipVisible, frame: .constant(CGRect(x: 200, y: 0, width: 120, height: 30)), anchorFrame: nil, popoverType: .popout, position: .left, viewId: "thirdPopover", settings: DYPopoverViewSettings(arrowLength: 10, offset: CGSize(width: -3, height: 18)))
                     
                 }
                 .frame(height: 30, alignment: .center)
@@ -159,13 +159,13 @@ public struct IconPickerView: View {
                         searchFieldTitle: searchFieldTitle != nil ? searchFieldTitle! : "Search icons"
                     )
                     .padding(10)
-                    .background(SelectedThemeColors2()bgSecondaryColour)
-                    .foregroundColor(SelectedThemeColors2()fontSecondaryColour)
+                    .background(SelectedThemeColors2().bgSecondaryColour)
+                    .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
                     .cornerRadius(10)
                     .environmentObject(SelectedThemeColors())
                     .background(
                         Rectangle()
-                            .fill(SelectedThemeColors2()bgMainColour)
+                            .fill(SelectedThemeColors2().bgMainColour)
                             .frame(width: 450, height: 57))
 //                    .frame(width: 420, height: 65, alignment: .top)
                     //                .offset(x: -20)
@@ -174,7 +174,7 @@ public struct IconPickerView: View {
             }
             .padding(10)
 //            .padding([.top], 5)
-//            .background(SelectedThemeColors2()bgMainColour)
+//            .background(SelectedThemeColors2().bgMainColour)
             .frame(width: 410)
             
             if self.searchIconName.count > 2 {
@@ -188,7 +188,7 @@ public struct IconPickerView: View {
         .padding([.leading], 20)
         .zIndex(0)
         .background(Rectangle()
-                        .fill(SelectedThemeColors2()bgMainColour)
+                        .fill(SelectedThemeColors2().bgMainColour)
                         .frame(width: 440, height: 326),
                     alignment: .top)
         .frame(width: 440, height: 422, alignment: .top)

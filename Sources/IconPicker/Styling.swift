@@ -13,7 +13,7 @@ struct IconsSectionHeader: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.footnote)
-            .foregroundColor(SelectedThemeColors2()bgMainColour)
+            .foregroundColor(SelectedThemeColors2().bgMainColour)
             .padding(5)
     }
 }
@@ -30,9 +30,9 @@ struct SmartIconsSectionHeader: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.footnote)
-            .foregroundColor(SelectedThemeColors2()bgMainColour)
+            .foregroundColor(SelectedThemeColors2().bgMainColour)
             .padding(5)
-            .background(SelectedThemeColors2()fontMainColour.opacity(0.6))
+            .background(SelectedThemeColors2().fontMainColour.opacity(0.6))
             .cornerRadius(5)
     }
 }

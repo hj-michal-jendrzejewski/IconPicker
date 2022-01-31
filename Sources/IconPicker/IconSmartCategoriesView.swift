@@ -81,7 +81,7 @@ struct IconSmartCategoriesView: View {
         .id("pinned")
         .frame(width:pinnedIcons.count > 18 ? CGFloat((ceil(Double(Float(pinnedIcons.count)/Float(6))))*34) : 90,height: 255.00)
         .padding(10)
-        .background(SelectedThemeColors2()bgSecondaryColour)
+        .background(SelectedThemeColors2().bgSecondaryColour)
         .cornerRadius(10)
         .onAppear {
             // the horizontal available space is size.width
@@ -147,7 +147,7 @@ struct IconSmartCategoriesView: View {
         .id("History")
         .frame(width: last24Icons.count > 12 ? CGFloat((ceil(Double(Float(last24Icons.count)/Float(6))))*34) : 90,height: 255.00)
         .padding(10)
-        .background(SelectedThemeColors2()bgSecondaryColour)
+        .background(SelectedThemeColors2().bgSecondaryColour)
         .cornerRadius(10)
         .fixedSize()
         .onAppear {
@@ -169,7 +169,7 @@ struct IconSmartCategoriesView: View {
         .id("Suggestions")
         .frame(width: 120, height: 255.00)
         .padding(10)
-        .background(SelectedThemeColors2()bgSecondaryColour)
+        .background(SelectedThemeColors2().bgSecondaryColour)
         .cornerRadius(10)
         .fixedSize()
         .onAppear {
