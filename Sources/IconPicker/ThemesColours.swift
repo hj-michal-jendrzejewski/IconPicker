@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 class SelectedThemeColors2 {
-    public var bgMainColour = Color.gray.opacity(0.5)
-    public var bgSecondaryColour = Color(red: 227/255, green: 226/255, blue: 224/255)
-    public var fontMainColour = Color(red: 30/255, green: 30/255, blue: 30/255)
+    public var bgMainColour = Color.black
+    public var bgSecondaryColour = Color(red: 28/255, green: 29/255, blue: 31/255)
+    public var fontMainColour = Color.white
     public var fontSecondaryColour = Color.gray
     public var elementActiveColour = Color.green
     public var buttonMainColour = Color.blue
