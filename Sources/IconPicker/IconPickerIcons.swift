@@ -223,12 +223,12 @@ class Emojis: ObservableObject {
     init() {
 //        let jsonEmojisWithCategoriesData =
         if let settingsURL = Bundle.module.url(forResource: "emoji", withExtension: "json") {
-            print(settingsURL)
+            print("-------------",settingsURL,"----------------")
         } else {
             print("nie ma emoji:(((((!!!!!!!")
         }
         
-        self.allEmojisInCategoriesWithData = self.readLocalFile(forName: "emoji")!
+        self.allEmojisInCategoriesWithData = self.readLocalFile(
 //        print("BBBBBBBBBEEEEEERR", type(of: jsonEmojisWithCategoriesData))
         
         
@@ -248,7 +248,7 @@ class Emojis: ObservableObject {
         let decoder = JSONDecoder()
         
             do {
-                if let bundlePath = Bundle.main.path(forResource: name,
+                if let bundlePath = Bundle.module.path(forResource: name,
                                                      ofType: "json"),
                     let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                     
