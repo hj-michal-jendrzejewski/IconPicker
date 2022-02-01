@@ -27,7 +27,7 @@ let package = Package(
             dependencies: [],
             exclude: [],
             resources: [
-                resources: [.copy("Resources")]
+                .copy("Resources")
             ]
         ),
         
