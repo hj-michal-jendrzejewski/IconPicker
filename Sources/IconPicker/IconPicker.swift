@@ -15,8 +15,8 @@ public struct IconPickerView: View {
     var triggerSizeAndCoordinates: CGRect?
     var connectorColor: Color?
     
-    
-    @EnvironmentObject var emojis: Emojis
+    @ObservedObject var emojis = Emojis()
+//    @EnvironmentObject var emojis: Emojis
     
     @State private var searchIconName:String = ""
     @State private var scrolledToCategoryName:String = ""
