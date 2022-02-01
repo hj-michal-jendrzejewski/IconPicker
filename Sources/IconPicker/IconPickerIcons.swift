@@ -222,7 +222,7 @@ class Emojis: ObservableObject {
     
     init() {
 //        let jsonEmojisWithCategoriesData =
-        if let settingsURL = Bundle.module.url(forResource: "settings", withExtension: "plist") {
+        if let settingsURL = Bundle.module.url(forResource: "emoji", withExtension: "json") {
             print(settingsURL)
         } else {
             print("nie ma emoji:(((((!!!!!!!")
