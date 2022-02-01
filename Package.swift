@@ -27,7 +27,7 @@ let package = Package(
             dependencies: [],
             exclude: [],
             resources: [
-                .copy("emoji.json")
+                .copy("Resources/emoji.json")
             ]
         ),
         
