@@ -183,6 +183,7 @@ public struct IconPickerView: View {
                     iconTapAction: self.iconTapAction
                 )
                 .offset(x: -3, y: 99)
+                .environmentObject(self.emojis)
             }
         }
         .padding([.leading], 20)
