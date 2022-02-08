@@ -34,13 +34,13 @@ public struct IconPickerView: View {
 
     private let headerLocalY: CGFloat = 19
     
-    public init(iconTapAction: @escaping (_ iconName: String) -> Void, searchFieldTitle: String?, headerView: AnyView?, triggerSizeAndCoordinates: CGRect?, connectorColor: Color?) {
-        self.iconTapAction = iconTapAction
-        self.searchFieldTitle = searchFieldTitle ?? nil
-        self.headerView = headerView ?? nil
-        self.triggerSizeAndCoordinates = triggerSizeAndCoordinates ?? nil
-        self.connectorColor = connectorColor ?? nil
-    }
+//    public init(iconTapAction: @escaping (_ iconName: String) -> Void, searchFieldTitle: String?, headerView: AnyView?, triggerSizeAndCoordinates: CGRect?, connectorColor: Color?) {
+//        self.iconTapAction = iconTapAction
+//        self.searchFieldTitle = searchFieldTitle ?? nil
+//        self.headerView = headerView ?? nil
+//        self.triggerSizeAndCoordinates = triggerSizeAndCoordinates ?? nil
+//        self.connectorColor = connectorColor ?? nil
+//    }
     
     
     public var body: some View {
