@@ -47,25 +47,25 @@ public struct IconPickerView: View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             
             // triggering view to headerView connector
-//            if self.headerViewSizeAndGlobalCoordinates != nil {
-//                Path { path in
-//                    path.move(to: CGPoint(x: 4, y: headerLocalY + 8))
-//                    path.addQuadCurve(to: CGPoint(x: -6, y: headerLocalY + 13), control: CGPoint(x:-6, y: headerLocalY+6))
-////                    path.addLine(to:CGPoint(x: -5, y: headerLocalY + 3))
-//                    path.addLine(to: CGPoint(x: -6, y: -3 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
-//                    path.addQuadCurve(to: CGPoint(x: -18, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY), control: CGPoint(x:-5, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
-////                    path.addLine(to: CGPoint(x: -25, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
-//                }
-//                .stroke(connectorColor!, lineWidth: 3)
-//                .zIndex(5)
-//                .offset(x: -7)
-//                .opacity(arrowPathOpacity)
-//
-//                Image(systemName: "arrowtriangle.left.fill")
-//                    .offset(x: -33, y: headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY)
-//                    .foregroundColor(connectorColor)
-//                    .font(.system(size: 13, weight: .thin))
-//            }
+            if self.headerViewSizeAndGlobalCoordinates != nil {
+                Path { path in
+                    path.move(to: CGPoint(x: 4, y: headerLocalY + 8))
+                    path.addQuadCurve(to: CGPoint(x: -6, y: headerLocalY + 13), control: CGPoint(x:-6, y: headerLocalY+6))
+//                    path.addLine(to:CGPoint(x: -5, y: headerLocalY + 3))
+                    path.addLine(to: CGPoint(x: -6, y: -3 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
+                    path.addQuadCurve(to: CGPoint(x: -18, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY), control: CGPoint(x:-5, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
+//                    path.addLine(to: CGPoint(x: -25, y: 5 + headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY))
+                }
+                .stroke(connectorColor!, lineWidth: 3)
+                .zIndex(5)
+                .offset(x: -7)
+                .opacity(arrowPathOpacity)
+
+                Image(systemName: "arrowtriangle.left.fill")
+                    .offset(x: -33, y: headerLocalY + self.triggerSizeAndCoordinates!.midY - self.headerViewSizeAndGlobalCoordinates!.midY)
+                    .foregroundColor(connectorColor)
+                    .font(.system(size: 13, weight: .thin))
+            }
             
             VStack(alignment: .leading, spacing: 0) {
                 HStack (alignment: .center) {
