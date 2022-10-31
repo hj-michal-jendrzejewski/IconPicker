@@ -47,7 +47,7 @@ struct IconCategoriesMenuView: View {
     
     func getMenuItemBgView() -> AnyView {
         return AnyView(Rectangle()
-            .fill(SelectedThemeColors2().bgMainColour)
+            .fill(ThemeColors().bgMainColour)
             .frame(width: 43, height: fakeBgHeight))
     }
     
