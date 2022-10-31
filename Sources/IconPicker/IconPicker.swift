@@ -37,7 +37,7 @@ public struct IconPickerView: View {
     public init(iconTapAction: @escaping (_ iconName: String) -> Void, searchFieldTitle: String? = nil, headerView: AnyView? = nil, triggerSizeAndCoordinates: CGRect? = nil, connectorColor: Color? = nil) {
         self.iconTapAction = iconTapAction
         self.searchFieldTitle = searchFieldTitle ?? "Search"
-        self.headerView = headerView ?? AnyView(_fromValue: VStack{})
+        self.headerView = headerView ?? AnyView(_fromValue: VStack{Text("Icon picker")})
         self.triggerSizeAndCoordinates = triggerSizeAndCoordinates ?? CGRect(x: 0, y: 0, width: 100.0, height: 20.0)
         self.connectorColor = connectorColor ?? Color.orange
     }
