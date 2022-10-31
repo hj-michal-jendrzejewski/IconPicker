@@ -196,6 +196,6 @@ struct IconSmartCategoriesView_Previews: PreviewProvider {
             onAppearAction: printDupa,
             iconsCategoriesSizes: .constant(["dupa" : 34])
         )
-        .environmentObject(SelectedSelectedThemeColors2())
+        .environmentObject(SelectedThemeColors2())
     }
 }

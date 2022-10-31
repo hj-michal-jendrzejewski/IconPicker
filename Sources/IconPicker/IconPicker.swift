@@ -162,7 +162,7 @@ public struct IconPickerView: View {
                     .background(SelectedThemeColors2().bgSecondaryColour)
                     .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
                     .cornerRadius(10)
-                    .environmentObject(SelectedSelectedThemeColors2())
+                    .environmentObject(SelectedThemeColors2())
                     .background(
                         Rectangle()
                             .fill(SelectedThemeColors2().bgMainColour)
@@ -215,7 +215,7 @@ public struct IconPickerView: View {
 //            headerView: AnyView(TagWithAdditionalActionView(tag: tag, additionalAction: printTag, actionImageName: "pencil", actionImageColor: .yellow)),
 //            triggerSizeAndCoordinates: CGRect(x: 27.0, y: 481.0, width: 100.0, height: 20.0),
 //            connectorColor: Color.orange)
-//            .environmentObject(SelectedSelectedThemeColors2())
+//            .environmentObject(SelectedThemeColors2())
 //            .environmentObject(Emojis())
 //    }
 //}

@@ -68,6 +68,6 @@ struct SearchBar_Previews: PreviewProvider {
             text: .constant(""),
             searchFieldTitle: "dupa"
         )
-            .environmentObject(SelectedSelectedThemeColors2())
+            .environmentObject(SelectedThemeColors2())
     }
 }
