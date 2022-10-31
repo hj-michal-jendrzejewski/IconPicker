@@ -47,7 +47,7 @@ public struct IconPickerView: View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             
             // triggering view to headerView connector
-            if self.headerViewSizeAndGlobalCoordinates?.midX != nil {
+            if self.triggerSizeAndCoordinates != nil {
                 Path { path in
                     path.move(to: CGPoint(x: 4, y: headerLocalY + 8))
                     path.addQuadCurve(to: CGPoint(x: -6, y: headerLocalY + 13), control: CGPoint(x:-6, y: headerLocalY+6))
