@@ -47,7 +47,7 @@ struct IconCategoriesMenuView: View {
     
     func getMenuItemBgView() -> AnyView {
         return AnyView(Rectangle()
-            .fill(ThemeColors().bgMainColour)
+            .fill(SelectedThemeColors2().bgMainColour)
             .frame(width: 43, height: fakeBgHeight))
     }
     
@@ -215,6 +215,6 @@ struct IconCategoriesMenuView_Previews: PreviewProvider {
             scrolledToCategoryName: .constant("OBJECTS"), visibleCategoryPercentageFromBeginning: .constant(0.9),
             visibleCategoryName: "Objects"
         )
-        .environmentObject(SelectedThemeColors())
+        .environmentObject(SelectedThemeColors2())
     }
 }

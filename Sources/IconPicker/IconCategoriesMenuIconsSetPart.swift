@@ -22,7 +22,7 @@ struct IconCategoriesMenuIconsSetPart: View {
     
     func getMenuItemBgView() -> AnyView {
         return AnyView(Rectangle()
-            .fill(ThemeColors().bgMainColour)
+            .fill(SelectedThemeColors2().bgMainColour)
             .frame(width: 43, height: fakeBgHeight))
     }
     

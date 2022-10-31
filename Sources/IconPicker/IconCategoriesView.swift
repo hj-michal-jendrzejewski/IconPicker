@@ -212,7 +212,7 @@ struct IconCategoriesView: View {
                 }
                 .iconsSectionHeaderStyle()
                 .frame(width: 270)
-                .background(categoriesRainbowColors[visibleCategoryName] != nil ? categoriesRainbowColors[visibleCategoryName] : ThemeColors().fontMainColour.opacity(1))
+                .background(categoriesRainbowColors[visibleCategoryName] != nil ? categoriesRainbowColors[visibleCategoryName] : SelectedThemeColors2().fontMainColour.opacity(1))
                 .cornerRadius(5)
                 .zIndex(10)
                 .opacity(["Pinned", "History", "Suggestions"].firstIndex(of: visibleCategoryName) == nil ? 1.0 : 0.0)
@@ -239,7 +239,7 @@ struct IconCategoriesView: View {
             
 //        }
         }
-        .foregroundColor(ThemeColors().listHeaderColour)
+        .foregroundColor(SelectedThemeColors2().listHeaderColour)
 
     }
 }
@@ -256,6 +256,6 @@ struct IconCategoriesView_Previews: PreviewProvider {
             visibleCategoryPercentageFromBeginning: .constant(0.5),
             iconTapAction: printString
         )
-        .environmentObject(SelectedThemeColors())
+        .environmentObject(SelectedSelectedThemeColors2())
     }
 }

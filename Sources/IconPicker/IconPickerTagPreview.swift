@@ -69,6 +69,6 @@
 //////        tag.icon = "person.3"
 ////        IconPickerTagPreview(tag: tag)
 ////        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-////        .environmentObject(SelectedThemeColors())
+////        .environmentObject(SelectedSelectedThemeColors2())
 ////    }
 ////}
