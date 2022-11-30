@@ -152,7 +152,7 @@ struct IconSmartCategoriesView: View {
         .fixedSize()
         .onAppear {
             // the horizontal available space is size.width
-            self.iconsCategoriesSizes["AHistory"] = CGFloat((ceil(Double(Float(last24Icons.count)/Float(6))))*34)
+            self.iconsCategoriesSizes["AHistory"] = last24Icons.count > 12 ? CGFloat((ceil(Double(Float(last24Icons.count)/Float(6))))*34) : 90
             
             self.onAppearAction()
         }

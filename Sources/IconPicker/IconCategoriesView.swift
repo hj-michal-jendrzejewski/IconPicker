@@ -71,7 +71,7 @@ struct IconCategoriesView: View {
     func setCategoriesSizesAndOffsets() -> Void {
         if self.iconsCategoriesSizes.count == iconsInCategories.count + self.smartCategoriesNumber && self.iconsCategoriesOffsetsReverese.count == 0 {
             
-            var rangeStart = -285
+            var rangeStart = -320
             
             for categoryName in Array(iconsCategoriesSizes.keys).sorted() {
                 let rangeMax = rangeStart + Int(self.iconsCategoriesSizes[categoryName]!) + 27
