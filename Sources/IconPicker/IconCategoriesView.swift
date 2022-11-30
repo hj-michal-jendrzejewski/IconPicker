@@ -91,6 +91,7 @@ struct IconCategoriesView: View {
     func setVisibleCategoryNameAsTitle(offsetKey: ViewOffsetKey.Value) -> Void {
         if self.iconsCategoriesOffsetsReverese[Double(offsetKey)].count > 0 {
             print(self.iconsCategoriesOffsetsReverese[Double(Int(offsetKey))][0])
+            print(Double(Int(offsetKey)))
             let visibleCategoryName = self.iconsCategoriesOffsetsReverese[Double(Int(offsetKey))][0].replacingOccurrences(of: "AAPinned", with: "Pinned").replacingOccurrences(of: "AHistory", with: "History").replacingOccurrences(of: "ASuggestions", with: "Suggestions")
             self.visibleCategoryName = visibleCategoryName
         }
