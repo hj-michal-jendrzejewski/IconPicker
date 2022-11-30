@@ -14,6 +14,7 @@ struct IconCategoryView: View {
     var iconTapAction: (_ iconName: String) -> Void
     
     @AppStorage("last24Icons") var last24Icons: [String] = []
+    @AppStorage("pinnedIcons") var pinnedIcons: [String] = []
 
     let rows = [
         GridItem(.fixed(40.00), spacing: 0),
@@ -26,6 +27,12 @@ struct IconCategoryView: View {
 
     private let gridSpacing = 10
     private let iconWidth = 24
+    
+    func addIconToPinned(iconName: String) -> Void {
+        if !pinnedIcons.contains(iconName) {
+            pinnedIcons.insert(iconName, at: 0)
+        }
+    }
     
     func addIconToLast24(iconName: String) -> Void {
         
@@ -64,6 +71,9 @@ struct IconCategoryView: View {
                             .onTapGesture {
                                 self.iconTapAction(iconName)
                                 self.addIconToLast24(iconName: iconName)
+                            }
+                            .onLongPressGesture(minimumDuration: 2) {
+                                self.addIconToPinned(iconName: iconName)
                             }
                             .foregroundColor(Color.white)
                             .frame(width: CGFloat(iconWidth))

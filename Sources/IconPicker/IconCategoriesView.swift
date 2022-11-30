@@ -84,6 +84,8 @@ struct IconCategoriesView: View {
                 rangeStart = rangeMax
             }
         }
+        print(self.iconsCategoriesSizes)
+        print(self.iconsCategoriesOffsets)
     }
 
     func setVisibleCategoryNameAsTitle(offsetKey: ViewOffsetKey.Value) -> Void {
