@@ -178,6 +178,7 @@ struct IconCategoriesView: View {
                         self.scrollOffset = $0
                         if self.initialScrollOffset == -1000 {
                             self.initialScrollOffset =  $0
+                            print("INITIAL SCROLLOFFSET:", $0, Int($0))
                         }
                         print($0, Int($0))
                         if self.iconsCategoriesVibrationOffsets.contains(Int($0)) {
