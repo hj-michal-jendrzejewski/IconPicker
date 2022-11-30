@@ -74,7 +74,7 @@ struct IconSmartCategoriesView: View {
                         .frame(width: CGFloat(iconWidth))
                     }
                 }
-                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+//                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                 .frame(height: 220.00)
             }
         }
@@ -139,7 +139,7 @@ struct IconSmartCategoriesView: View {
                         //
                     }
                 }
-                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+//                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                 .frame(height: 220.00)
                 
             }
