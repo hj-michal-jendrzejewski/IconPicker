@@ -71,6 +71,8 @@ struct IconCategoryView: View {
                             .onTapGesture {
                                 self.iconTapAction(iconName)
                                 self.addIconToLast24(iconName: iconName)
+                            }
+                            .onLongPressGesture(minimumDuration: 2) {
                                 self.addIconToPinned(iconName: iconName)
                             }
                             .foregroundColor(Color.white)
