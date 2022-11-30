@@ -162,7 +162,7 @@ public struct IconPickerView: View {
                     .background(SelectedThemeColors2().bgSecondaryColour)
                     .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
                     .cornerRadius(10)
-                    .environmentObject(SelectedThemeColors2())
+                    .environmentObject(SelectedThemeColors())
                     .background(
                         Rectangle()
                             .fill(SelectedThemeColors2().bgMainColour)

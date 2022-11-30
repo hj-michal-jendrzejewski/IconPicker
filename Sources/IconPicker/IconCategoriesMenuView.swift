@@ -215,6 +215,6 @@ struct IconCategoriesMenuView_Previews: PreviewProvider {
             scrolledToCategoryName: .constant("OBJECTS"), visibleCategoryPercentageFromBeginning: .constant(0.9),
             visibleCategoryName: "Objects"
         )
-        .environmentObject(SelectedThemeColors2())
+        .environmentObject(SelectedThemeColors())
     }
 }

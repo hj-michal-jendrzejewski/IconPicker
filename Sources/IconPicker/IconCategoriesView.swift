@@ -256,6 +256,6 @@ struct IconCategoriesView_Previews: PreviewProvider {
             visibleCategoryPercentageFromBeginning: .constant(0.5),
             iconTapAction: printString
         )
-        .environmentObject(SelectedThemeColors2())
+        .environmentObject(SelectedThemeColors())
     }
 }
