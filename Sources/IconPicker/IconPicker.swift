@@ -37,7 +37,7 @@ public struct IconPickerView: View {
     public init(iconTapAction: @escaping (_ iconName: String) -> Void, searchFieldTitle: String? = nil, headerView: AnyView? = nil, triggerSizeAndCoordinates: CGRect? = nil, connectorColor: Color? = nil) {
         self.iconTapAction = iconTapAction
         self.searchFieldTitle = searchFieldTitle ?? "Search"
-        self.headerView = headerView ?? AnyView(_fromValue: VStack{Text("Icon picker")})
+        self.headerView = headerView //?? AnyView(_fromValue: VStack{Text("Icon picker")})
         self.triggerSizeAndCoordinates = triggerSizeAndCoordinates ?? nil
         self.connectorColor = connectorColor ?? Color.orange
     }
@@ -68,7 +68,7 @@ public struct IconPickerView: View {
             }
             
             VStack(alignment: .leading, spacing: 0) {
-                HStack (alignment: .center) {
+                HStack () {
                     GeometryReader { geo in
                         
                         if headerView != nil {
@@ -87,6 +87,10 @@ public struct IconPickerView: View {
                                     }
                                 }
                                 .offset(y: -5)
+                        } else {
+                            Text("Icon picker")
+                                .font(.caption)
+                                .offset(y: 5)
                         }
                     }
                     .foregroundColor(SelectedThemeColors2().fontSecondaryColour)
