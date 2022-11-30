@@ -119,7 +119,7 @@ public struct IconPickerView: View {
                 }
                 .frame(height: 30, alignment: .center)
                 .padding([.bottom],10)
-                if showSfSymbols == true {
+                if showSfSymbols == false {
                     IconCategoriesView(
                         iconsInCategories: symbols,
                         scrolledToCategoryName: $scrolledToCategoryName,
@@ -133,7 +133,7 @@ public struct IconPickerView: View {
                         scrolledToCategoryName: $scrolledToCategoryName, visibleCategoryPercentageFromBeginning: $visibleCategoryPercentageFromBeginning,
                         visibleCategoryName: self.visibleCategoryName
                     )
-                        .offset(x:-8, y: -2)
+                        .offset(x:-8, y: -3)
                 } else {
                     IconCategoriesView(
                         iconsInCategories: emojis.emojis,
@@ -148,7 +148,7 @@ public struct IconPickerView: View {
                         scrolledToCategoryName: $scrolledToCategoryName, visibleCategoryPercentageFromBeginning: $visibleCategoryPercentageFromBeginning,
                         visibleCategoryName: self.visibleCategoryName
                     )
-                        .offset(x:-8, y: -2)
+                        .offset(x:-8, y: -3)
                 }
 //                .frame(height: 290, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 
@@ -166,7 +166,7 @@ public struct IconPickerView: View {
                     .background(
                         Rectangle()
                             .fill(SelectedThemeColors2().bgMainColour)
-                            .frame(width: 450, height: 57))
+                            .frame(width: 450, height: 62))
 //                    .frame(width: 420, height: 65, alignment: .top)
                     //                .offset(x: -20)
                 }
@@ -197,25 +197,22 @@ public struct IconPickerView: View {
 }
 
 
-//struct IconPickerView_Previews: PreviewProvider {
-//    
-//    static var previews: some View {
-//        func printString(string: String) -> Void {
-//            print(string)
-//        }
-//        
-//        func printTag(tag: Tag) -> Void {
-//            print(tag.name)
-//        }
-//        
+struct IconPickerView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        func printString(string: String) -> Void {
+            print(string)
+        }
+        
+        func printTag(name: String) -> Void {
+            print(name)
+        }
+        
 //        let tag = Tag(context: PersistenceController.preview.container.viewContext)
-//        
-//        return IconPickerView(
-//            iconTapAction: printString,
-//            headerView: AnyView(TagWithAdditionalActionView(tag: tag, additionalAction: printTag, actionImageName: "pencil", actionImageColor: .yellow)),
-//            triggerSizeAndCoordinates: CGRect(x: 27.0, y: 481.0, width: 100.0, height: 20.0),
-//            connectorColor: Color.orange)
-//            .environmentObject(SelectedThemeColors2())
-//            .environmentObject(Emojis())
-//    }
-//}
+        
+        return IconPickerView(
+            iconTapAction: printString)
+            .environmentObject(SelectedThemeColors())
+            .environmentObject(Emojis())
+    }
+}

@@ -234,7 +234,7 @@ struct IconCategoriesView: View {
                     }
                 })
             }
-            .frame(width: 350, alignment: .leading)
+            .frame(width: 390, alignment: .leading)
             .offset(x: -10, y:-115)
             
 //        }
