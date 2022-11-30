@@ -100,9 +100,7 @@ struct DashedProgressViewStyleWithClickableBar: ProgressViewStyle {
                         .frame(width: 40, height: hoverState[number] == true ? 10 : 5, alignment: .top)
                         .border(Color.white)
                         .onHover(perform: { hover in
-                                                        print (number)
                                                         hoverState[number] = hover
-                                                        print(hoverState)
                                                     })
                     }
                 }

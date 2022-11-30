@@ -84,14 +84,11 @@ struct IconCategoriesView: View {
                 rangeStart = rangeMax
             }
         }
-        print(self.iconsCategoriesSizes)
-        print(self.iconsCategoriesOffsets)
     }
 
     func setVisibleCategoryNameAsTitle(offsetKey: ViewOffsetKey.Value) -> Void {
         if self.iconsCategoriesOffsetsReverese[Double(offsetKey)].count > 0 {
-            print(self.iconsCategoriesOffsetsReverese[Double(Int(offsetKey))][0])
-            print(Double(Int(offsetKey)))
+        
             let visibleCategoryName = self.iconsCategoriesOffsetsReverese[Double(Int(offsetKey))][0].replacingOccurrences(of: "AAPinned", with: "Pinned").replacingOccurrences(of: "AHistory", with: "History").replacingOccurrences(of: "ASuggestions", with: "Suggestions")
             self.visibleCategoryName = visibleCategoryName
         }
@@ -178,9 +175,7 @@ struct IconCategoriesView: View {
                         self.scrollOffset = $0
                         if self.initialScrollOffset == -1000 {
                             self.initialScrollOffset =  $0
-                            print("INITIAL SCROLLOFFSET:", $0, Int($0))
                         }
-                        print($0, Int($0))
                         if self.iconsCategoriesVibrationOffsets.contains(Int($0)) {
                             print ($0, "vibrateeeeeee!!!")
                         }
@@ -223,17 +218,12 @@ struct IconCategoriesView: View {
                 .animation(.default)
                 .onChange(of: self.visibleCategoryPercentageFromBeginning, perform: { value in
                     
-//                    print(value)
                     if value < 0.05 {
-                        print("początek", self.scrollOffset)
                     } else if (value > 0.24 && value < 0.26) {
-                        print ("ćwiara", self.scrollOffset)
                         generateVibration()
                     } else if (value > 0.49 && value < 0.51) {
-                        print ("środek", self.scrollOffset)
                         generateVibration()
                     } else if (value > 0.74 && value < 0.76) {
-                        print("trzy czwarte", self.scrollOffset)
                         generateVibration()
                     }
                 })

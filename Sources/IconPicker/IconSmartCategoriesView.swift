@@ -133,7 +133,6 @@ struct IconSmartCategoriesView: View {
                             self.iconTapAction(iconName)
                         }
                         .onLongPressGesture {
-                            print("onLongPressGesture in smart")
                             self.addIconToPinned(iconName: iconName)
                         }
                         .frame(width: CGFloat(iconWidth))

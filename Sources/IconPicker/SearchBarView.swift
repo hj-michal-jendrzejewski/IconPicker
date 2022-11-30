@@ -31,7 +31,6 @@ struct SearchBar: View {
                  
                         if isEditing {
                             Button(action: {
-                                print("x")
                                 self.text = ""
                             }) {
                                 Image(systemName: "multiply.circle.fill")

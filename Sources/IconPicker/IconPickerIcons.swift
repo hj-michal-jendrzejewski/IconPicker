@@ -221,7 +221,6 @@ class Emojis: ObservableObject {
     let emojiFileName: String = "emoji"
     
     init() {
-//        let jsonEmojisWithCategoriesData =
         if let settingsURL = Bundle.module.url(forResource: "emoji", withExtension: "json") {
             print(settingsURL)
         } else {
@@ -229,12 +228,9 @@ class Emojis: ObservableObject {
         }
         
         self.allEmojisInCategoriesWithData = self.readLocalFile(forName: "emoji")!
-//        print("BBBBBBBBBEEEEEERR", type(of: jsonEmojisWithCategoriesData))
-        
         
         self.allEmojisFlattenWithData = self.allEmojisInCategoriesWithData.map({$0.emojis}).flatMap({$0})
         for category in self.allEmojisInCategoriesWithData {
-//            print(category.title)
             emojis[category.title] = []
             
             category.emojis.forEach { emoji in
