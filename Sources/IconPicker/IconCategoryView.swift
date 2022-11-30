@@ -73,6 +73,7 @@ struct IconCategoryView: View {
                                 self.addIconToLast24(iconName: iconName)
                             }
                             .onLongPressGesture(minimumDuration: 2) {
+                                print("onLongPressGesture in normal")
                                 self.addIconToPinned(iconName: iconName)
                             }
                             .foregroundColor(Color.white)
@@ -83,6 +84,10 @@ struct IconCategoryView: View {
                             .onTapGesture {
                                 self.iconTapAction(iconName)
                                 self.addIconToLast24(iconName: iconName)
+                            }
+                            .onLongPressGesture(minimumDuration: 2) {
+                                print("onLongPressGesture in normal 222")
+                                self.addIconToPinned(iconName: iconName)
                             }
                             .foregroundColor(categoriesRainbowColors[category])
                             .frame(width: CGFloat(iconWidth))
