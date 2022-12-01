@@ -178,6 +178,8 @@ struct IconCategoriesView: View {
                         }
                         if self.iconsCategoriesVibrationOffsets.contains(Int($0)) {
                             print ($0, "vibrateeeeeee!!!")
+                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                                impactMed.impactOccurred()
                         }
                         setVisibleCategoryNameAsTitle(offsetKey: $0)
                         setVisibleCategoryPercentageFromBeginning()

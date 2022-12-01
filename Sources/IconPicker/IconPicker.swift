@@ -170,7 +170,7 @@ public struct IconPickerView: View {
                     .background(
                         Rectangle()
                             .fill(SelectedThemeColors2().bgMainColour)
-                            .frame(width: 450, height: 62))
+                            .frame(width: 430, height: 62))
 //                    .frame(width: 420, height: 65, alignment: .top)
                     //                .offset(x: -20)
                 }
@@ -215,7 +215,11 @@ struct IconPickerView_Previews: PreviewProvider {
 //        let tag = Tag(context: PersistenceController.preview.container.viewContext)
         
         return IconPickerView(
-            iconTapAction: printString)
+            iconTapAction: printString,
+            searchFieldTitle: "Search",
+            headerView: AnyView(Text("")),
+            triggerSizeAndCoordinates: CGRect(x: 50.0, y: 550.0, width: 50.0, height: 0.0),
+            connectorColor: .orange)
             .environmentObject(SelectedThemeColors())
             .environmentObject(Emojis())
     }

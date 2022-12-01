@@ -194,9 +194,9 @@ struct IconCategoriesMenuView: View {
         }
         .background(Rectangle()
                         .fill(SelectedThemeColors2().bgMainColour)
-                        .frame(width: 27, height: fakeBgHeight * 2.5).offset(x: -33),
+                        .frame(width: 27, height: fakeBgHeight * 2.5).offset(x: -12),
                     alignment: .topLeading)
-        .frame(width:420)
+        .frame(width:398)
         .animation(.easeInOut)
         .onAppear{
             allCategoriesArray = Array(iconsInCategories.keys).sorted()
