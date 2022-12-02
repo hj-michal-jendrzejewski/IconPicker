@@ -54,7 +54,7 @@ The code above produces this view:
 ![My Image](gitResources/basic.png)
 
 
-All parameters code example
+## All parameters code example
 
 ```Swift
 import SwiftUI
