@@ -194,7 +194,7 @@ struct IconCategoriesMenuView: View {
         }
         .background(Rectangle()
                         .fill(SelectedThemeColors2().bgMainColour)
-                        .frame(width: 27, height: fakeBgHeight * 2.5).offset(x: -12),
+                        .frame(width: 27, height: fakeBgHeight * 2.5).offset(x: -22),
                     alignment: .topLeading)
         .frame(width:398)
         .animation(.easeInOut)
