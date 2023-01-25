@@ -81,8 +81,3 @@ struct IconPickerPlayground: View {
 The code above produces this view:
 ![My Image](gitResources/advanced.png)
 
-
-
-
-
-
